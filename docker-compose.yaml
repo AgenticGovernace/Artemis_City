@@ -1,6 +1,5 @@
 services:
   # Core Artemis Services
-  #
   # The DEPLOYMENT.md spec calls for three Python services on 8000/8001/
   # 8002 (Kernel / Memory Bus / Registry). Today only the FastAPI
   # dashboard at app/api/main.py is wired up as an HTTP server; the
@@ -15,7 +14,7 @@ services:
       dockerfile: src/Dockerfile-python
     pull_policy: build
     ports:
-      - "8000:8000"
+      - "3000:3000"
     environment:
       - ARTEMIS_ENV=production
       - ARTEMIS_LOG_LEVEL=INFO
@@ -35,7 +34,7 @@ services:
       - artemis
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -62,7 +61,7 @@ services:
       - artemis
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4000/health', (res) => res.statusCode === 200 ? process.exit(0) : process.exit(1))"]
+      test: [ "CMD", "node", "-e", "require('http').get('http://localhost:4000/health', (res) => res.statusCode === 200 ? process.exit(0) : process.exit(1))" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -120,12 +119,10 @@ services:
       - ./config/grafana/datasources:/etc/grafana/provisioning/datasources
     networks:
       - artemis
-    depends_on:
-      - prometheus
     restart: unless-stopped
-
 volumes: { redis-data:  , vector-data:  , prometheus-data:  , grafana-data: }
 
-networks:
-  artemis:
-    driver: bridge
+openapi:
+info:
+
+

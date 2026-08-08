@@ -258,7 +258,7 @@ Task data A [MERGE CONFLICT: human review needed]
 | Semantic search | 150ms | 300ms | 500ms |
 ## Prometheus Metrics
 ### Write Metrics
-```
+```asciidoc
 artemis_memory_write_latency_ms (histogram)
   Labels: operation_type, status, conflict_resolution
 artemis_memory_write_count (counter)
@@ -270,7 +270,7 @@ artemis_memory_sync_lag_ms (gauge)
   Current lag between primary and secondary stores
 ```
 ### Read Metrics
-```
+```asciidoc
 artemis_memory_read_latency_ms (histogram)
   Labels: query_type, result_count, cache_hit
 artemis_memory_read_count (counter)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Canonical runtime storage paths for Artemis City.
 
 All persistent runtime state belongs under the repository's top-level

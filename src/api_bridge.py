@@ -43,15 +43,13 @@ from src.agents.atp.atp_validator import ATPValidator
 from src.agents.llm_agent import LLMAgent
 from src.governance.approvals import SelfUpdateGovernor, UpdateProposal
 from src.governance.checkpoints import CheckpointStore, RollbackManager
-from src.governance.trust import (TrustMetrics, compute_trust_score,
-                                  trust_breakdown)
+from src.governance.trust import TrustMetrics, compute_trust_score, trust_breakdown
 from src.integration.agent_registry import AgentRegistry, AgentRegistryStore
 from src.integration.hebbian_router import HebbianRouter
 from src.integration.learning_governance import LearningGovernanceCoordinator
 from src.integration.memory_bus import MemoryBus
 from src.integration.sandbox import AgentSandbox
-from src.integration.trust_interface import (TRUST_THRESHOLDS, TrustInterface,
-                                             TrustLevel)
+from src.integration.trust_interface import TRUST_THRESHOLDS, TrustInterface, TrustLevel
 from src.mcp.hebbian_weights import HebbianWeightManager
 from src.mcp.vector_store import LocalVectorStore
 from src.obsidian_integration.manager import ObsidianManager

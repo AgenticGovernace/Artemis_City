@@ -5,7 +5,7 @@ Welcome to **Artemis City**, where agents aren't just code—they're **citizens*
 ## The City Metaphor
 Artemis City transforms technical operations into a vibrant urban experience:
 
-``` lua
+```asciidoc
 | Technical Term | City Metaphor | Who Handles It |
 | ----- | ----- | ----- |
 | Memory Operations | Mail Delivery | Pack Rat (Postal Service) |
