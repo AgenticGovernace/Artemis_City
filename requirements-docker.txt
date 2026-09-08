@@ -34,7 +34,7 @@ bandit>=1.7.0
 safety>=2.3.0
 
 # Data science (optional, for demos)
-numpy>=1.24.0
+numpy>=2.5.3
 pandas>=1.5.0
 
 # CLI/Development
